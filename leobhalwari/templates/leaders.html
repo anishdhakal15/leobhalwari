@@ -1,0 +1,53 @@
+{%extends 'base.html' %}
+{% block title %}OUR PROUD LEADERS{%endblock%}
+{% block head %}{%endblock%}
+{%block body%}
+<section class="mbr-section info3 cid-rXUBd3eVfz" id="info3-r">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="media-container-column title col-12 col-md-10">
+                <h2 class="align-left mbr-bold mbr-white pb-3 mbr-fonts-style display-2">OUR PROUD LEADERS</h2>
+                <h3 class="mbr-section-subtitle align-left mbr-light mbr-white pb-3 mbr-fonts-style display-5">"Empowering Youth"&nbsp;<br><strong>L.Y. <span id="empyear"></span></strong></h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="team1 cid-rXWxtb9Lqq">    
+    <div class="container align-center">
+        <div class="row media-row"> 
+            {%for leader in leaders%}
+            <div class="team-item col-lg-3 col-md-6">
+                    <div class="item-image">
+                        <img src="/media/{{leader.image}}" alt="" title="">
+                    </div>
+                    <div class="item-caption py-3">
+                        <div class="item-name px-2">
+                            <p class="mbr-fonts-style display-5">{{leader.name}}</p>
+                        </div>
+                        <div class="item-role px-2">
+                            <p>{{leader.post}}<br>{{leader.year}}</p>
+                        </div>
+                    </div>
+            </div>
+            
+            {%endfor%}
+
+
+
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<script>
+    let yr = document.getElementById('empyear');
+    let fullyear=new Date().getFullYear();
+    yr.innerText = `${fullyear}/${Number((String(fullyear)).slice(2))+1}`
+</script>
+
+{%endblock%}

@@ -1,0 +1,283 @@
+
+  {%extends 'base.html' %}
+  {% block title %}Home{%endblock%}
+  {% block head %}
+  <style>
+#leftcar{
+    background-color: black;
+    height: 2rem;
+    width: 3rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1rem;
+    border: 1px solid black;
+    border-radius: 30%;
+}    
+#rightcar{
+    background-color: black;
+    height: 2rem;
+    width: 3rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 1rem;
+    border: 1px solid black;
+    border-radius: 30%;
+}   
+ .gg-chevron-right-o {
+ box-sizing: border-box;
+ position: relative;
+ display: block;
+ transform: scale(var(--ggs,1));
+ width: 22px;
+ height: 22px;
+ border: 2px solid;
+ border-radius: 100px
+}
+
+.gg-chevron-right-o::after {
+ content: "";
+ display: block;
+ box-sizing: border-box;
+ position: absolute;
+ width: 6px;
+ height: 6px;
+ border-bottom: 2px solid;
+ border-right: 2px solid;
+ transform: rotate(-45deg);
+ left: 5px;
+ top: 6px
+} 
+ .gg-chevron-left-o {
+ box-sizing: border-box;
+ position: relative;
+ display: block;
+ transform: scale(var(--ggs,1));
+ width: 22px;
+ height: 22px;
+ border: 2px solid;
+ border-radius: 100px
+}
+
+.gg-chevron-left-o::after {
+ content: "";
+ display: block;
+ box-sizing: border-box;
+ position: absolute;
+ width: 6px;
+ height: 6px;
+ border-bottom: 2px solid;
+ border-left: 2px solid;
+ transform: rotate(45deg);
+ left: 7px;
+ top: 6px
+} 
+#recentshow{
+    /* background-color: blue; */
+    margin-left: 50%;
+}
+
+  </style>
+  {%endblock%}
+  {%block body%}
+  <!-- <section class="engine"><a href="https://mobirise.info/x"></a></section>  -->
+    <section class="header1 cid-rY2atLOVSP mbr-parallax-background" id="header1-1o">
+        <div class="mbr-overlay" style="opacity: 0.2; background-color: rgb(20, 157, 204);">
+        </div>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="mbr-white col-md-10">
+
+                    <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-2"><strong>Where
+                            There’s a Need, <br>There’s a Leo</strong></h3>
+                    <p class="mbr-text align-center pb-3 mbr-fonts-style display-5">
+                        If you’re a young person interested in joining a Leo club of Rupandehi Bhalwari, reach out to
+                        our contact below to get more information.
+                    </p>
+                    <div class="mbr-section-btn align-center"><a class="btn btn-md btn-primary display-4"
+                            href="contact.html">
+                            CONTACT US</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="padding-top: 15px;padding-bottom: 20px;" class="header7 cid-rY1HuUKOW1" id="header7-1j">
+           <div class="container mb-5">
+            <div class="media-container-row">
+                <div class="col-12 align-center">
+                    <h2 class="mbr-section-title pb-3 mbr-fonts-style display-2"><strong>Recent activities</strong></h2>
+                    
+                </div>
+            </div>
+        </div>
+            <div id="demo" class="carousel slide my-3" data-ride="carousel">
+                <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            {%for i in range%}
+            <li data-target="#demo" data-slide-to="{{i}}" ></li>
+            {%endfor%}
+          </ul>                
+                <div class="container carousel-inner no-padding">
+                  <div class="carousel-item active">
+                    
+                    {%for i in product %}
+                    <div class="col-xs-5 col-sm-6 col-md-3">
+                      <div class="card" style="width: 14.5rem; ">
+                        <img src='/media/{{i.image}}' class="card-img-top" alt='image'>
+                        <div class="card-body">
+                          <h5 class="card-title" id="name"><b>{{i.title|truncatechars:20}}</b></h5>
+                          <p class="card-text">{{i.string|truncatechars:120}}</p>
+                        </div>
+                      </div>
+                   </div>
+                      {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last %}
+                        </div><div class="carousel-item">
+                     
+                      {%endif%}
+                    {%endfor%}
+                    
+                  </div>
+                  
+                    
+                  </div>
+                  <div id="recentshow" >
+                    <a href="/services" class="btn btn-primary-outline display-4">Show More</a>
+                </div>
+                  
+            </div>
+              
+
+                <span class="carousel-control-prev "  href="#demo" id="leftcar" data-slide="prev"><i class="gg-chevron-left-o"></i></span>
+
+                <span class="carousel-control-next" href="#demo" id="rightcar" data-slide="next"><i class="gg-chevron-right-o"></i></span>
+
+
+
+
+
+
+
+ </div>
+    </section>
+
+
+    <section class="testimonials4 cid-rXUjsgOGWE" id="testimonials4-d">
+        <div class="container">
+            <div class="col-md-10 testimonials-container">
+                {% for testa in testas %}
+                <div class="testimonials-item">
+                    <div class="user row">
+                        <div class="col-lg-3 col-md-4">
+                            <div class="user_image">
+                                <img src="/media/{{testa.image}}" alt="" title="">
+                            </div>
+                        </div>
+                        <div class="testimonials-caption col-lg-9 col-md-8">
+                            <div class="user_text">
+                                <p class="mbr-fonts-style  display-7">{{testa.testimonial_string}}&nbsp;<br></p>
+                            </div>
+                            <div class="user_name mbr-bold mbr-fonts-style align-left pt-3 display-7">{{testa.said_by | title}}
+                            </div>
+                            <div class="user_desk mbr-light mbr-fonts-style align-left pt-2 display-7">
+                                <strong>{{testa.post | upper}}</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {%endfor%}
+            </div>
+        </div>
+    </section>
+
+    <section class="services2 cid-rXUkXjFzWr" id="services2-e">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="media-container-row">
+                    <div class="mbr-figure" style="width: 30%;">
+                        <img src="/media/images/charter_president.jpg" alt="Charter President" title="Ashim Shrestha">
+                    </div>
+                    <div class="align-left aside-content">
+                        <h2 class="mbr-title pt-2 mbr-fonts-style display-5">Charter President</h2>
+                        <div class="mbr-section-text">
+                            <p class="mbr-text text1 pt-2 mbr-light mbr-fonts-style display-7">
+                                Leo Club of Kathmandu Chabahil was proposed in year of 2004 and it is sponsored by Lions
+                                Club of Kathmandu Chabahil which was effectively verified from 17th Day of May in the
+                                year of 2005 with the leadership of Mr. Ashim Shrestha (Charter President).&nbsp;</p>
+                        </div>
+                        <div class="mbr-section-btn pt-3 align-left"><a href="/leaders"
+                                class="btn btn-primary-outline display-4">Show More</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team1 cid-rY2wbPUUKx" id="team1-1q">
+
+
+        <div class="container align-center">
+            <h2 class="pb-3 mbr-fonts-style mbr-section-title display-2"><strong>
+                    OUR CORE ADVISORS</strong></h2>
+            <div class="row media-row">
+                {%for advisor in advisors%}
+                <div class="team-item col-lg-3 col-md-6">
+                    <div class="item-image">
+                        <img src="/media/{{advisor.advisor_image}}" alt=""
+                            title="">
+                    </div>
+                    <div class="item-caption py-3">
+                        <div class="item-name px-2">
+                            <p class="mbr-fonts-style display-7"><strong>{{advisor.advisor_name | title}}</strong></p>
+                        </div>
+                        <div class="item-role px-2">
+                            <p>{{advisor.advisor_post}}</p>
+                        </div>
+
+                    </div>
+                </div>
+                {%endfor%}
+
+            </div>
+        </div>
+    </section>
+
+    <section class="cid-rXUnUGfpuC" id="footer1-h">
+
+        <div class="container">
+            <div class="media-container-row content text-white">
+                <div class="col-12 col-md-3">
+                    <div class="media-wrap">
+                        <a href="">
+                            <img src="/media/images/leoclub.jpg" style="border-radius: 26%;height: 10rem;" alt="logo" title="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                    <h5 class="pb-3">
+                        Address
+                    </h5>
+                    <p class="mbr-text">Chandra Vinayak Marg, <br>Chabahil, Kathmandu 44602</p>
+                </div>
+                <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                    <h5 class="pb-3">
+                        Contacts
+                    </h5>
+                    <p class="mbr-text">Phone: +977-9860081778</p>
+                    <p>
+                        Email: leochabahil@gmail.com<br></p>
+                    <p></p>
+                </div>
+                <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                    <h5 class="pb-3">
+                        Links
+                    </h5>
+                    <p class="mbr-text"><a href="https://lionsclubs.org/en" target="_blank" class="text-white">Lions
+                            International</a><br><a href="http://www.ldc325a2.org.np/" target="_blank"
+                            class="text-white">Leo District 325 A2</a><br></p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    {%endblock%}
