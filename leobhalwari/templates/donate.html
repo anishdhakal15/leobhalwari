@@ -1,0 +1,91 @@
+
+  {%extends 'base.html' %}
+  {% block title %}Donate{%endblock%}
+  {% block head %}
+<style>
+    .doform{
+        height:20rem;
+        width: 25rem;
+        margin-left: 4rem;
+        border: 1px solid black;
+
+    }
+</style>
+  {%endblock%}
+
+
+  {%block body%}
+
+
+  <section class="mbr-section info3 cid-rXUBd3eVfz" id="info3-r">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="media-container-column title col-12 col-md-10">
+                <h2 class="align-left mbr-bold mbr-white pb-3 mbr-fonts-style display-2">HAMI LAI DONATE GARAO</h2>
+                <h3 class="mbr-section-subtitle align-left mbr-light mbr-white pb-3 mbr-fonts-style display-5">"Empowering Youth"&nbsp;<br><strong>L.Y. <span id="empyear"></span></strong></h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<h2>Donate on esewa: 9867136339</h2>
+<h2>Donate on Global Bank: OE55867136339</h2>
+
+<div class="doform">
+    <h3>Please Provide Us your Information</h3>
+    <label>Name:</label>
+    <input type="text" name="name"><br>
+    <label>Address:</label>
+    <input type="text" name="addr"><br>
+    <label>Mobile No:</label>
+    <input type="text" name="mobile"><br>
+    <input type="submit">
+
+</div>
+
+  <section class="cid-rXUnUGfpuC" id="footer1-h">
+
+    <div class="container">
+        <div class="media-container-row content text-white">
+            <div class="col-12 col-md-3">
+                <div class="media-wrap">
+                    <a href="">
+                        <img src="/media/images/leoclub.jpg" style="border-radius: 26%;height: 10rem;" alt="logo" title="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">
+                    Address
+                </h5>
+                <p class="mbr-text">Chandra Vinayak Marg, <br>Chabahil, Kathmandu 44602</p>
+            </div>
+            <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">
+                    Contacts
+                </h5>
+                <p class="mbr-text">Phone: +977-9860081778</p>
+                <p>
+                    Email: leochabahil@gmail.com<br></p>
+                <p></p>
+            </div>
+            <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">
+                    Links
+                </h5>
+                <p class="mbr-text"><a href="https://lionsclubs.org/en" target="_blank" class="text-white">Lions
+                        International</a><br><a href="http://www.ldc325a2.org.np/" target="_blank"
+                        class="text-white">Leo District 325 A2</a><br></p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    let yr = document.getElementById('empyear');
+    let fullyear=new Date().getFullYear();
+    yr.innerText = `${fullyear}/${Number((String(fullyear)).slice(2))+1}`
+</script>
+  {%endblock%}
