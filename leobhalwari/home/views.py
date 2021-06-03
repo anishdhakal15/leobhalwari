@@ -1,5 +1,5 @@
 from django.shortcuts import render,HttpResponse
-from .models import Testimonial,Advisor,leader,BOD,Committee,Service
+from .models import Testimonial,Advisor,leader,Team,Service
 import random
 from math import ceil
 
@@ -24,11 +24,14 @@ def leaders(request):
         return render(request,'leaders.html',{'leaders':leaders})
 def team(request):
     if request.method=='GET':
-        bod=BOD.objects.all()
-        committee=Committee.objects.all()
-        return render(request,'teams.html',{'bods':bod,'committees':committee})
+        bod=Team.objects.all()
+        return render(request,'teams.html',{'bods':bod})
 
 def services(request):
     if request.method=='GET':
         sers=Service.objects.all()
         return render(request,'service.html',{'sers':reversed(sers)})
+
+def donate(request):
+    if request.method=='GET':
+        return render(request,'donate.html')

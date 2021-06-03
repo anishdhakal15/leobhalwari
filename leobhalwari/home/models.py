@@ -26,7 +26,7 @@ class leader(models.Model):
     def __str__(self):
         return self.post + ' ' + self.name
 
-class BOD(models.Model):
+class Team(models.Model):
     bod_id = models.AutoField
     name = models.CharField(max_length=255,default='')
     post = models.CharField(max_length=255,default='')
@@ -34,14 +34,14 @@ class BOD(models.Model):
     facebook_link = models.CharField(max_length=255,default='')
     def __str__(self):
         return self.post + ' ' + self.name
-class Committee(models.Model):
-    committee_id = models.AutoField
-    name = models.CharField(max_length=255,default='')
-    post = models.CharField(max_length=255,default='')
-    image = models.ImageField(upload_to="images", default='')
-    facebook_link = models.CharField(max_length=255,default='')
-    def __str__(self):
-        return self.post + ' ' + self.name
+# class Committee(models.Model):
+#     committee_id = models.AutoField
+#     name = models.CharField(max_length=255,default='')
+#     post = models.CharField(max_length=255,default='')
+#     image = models.ImageField(upload_to="images", default='')
+#     facebook_link = models.CharField(max_length=255,default='')
+#     def __str__(self):
+#         return self.post + ' ' + self.name
 
 class Service(models.Model):
     service_id = models.AutoField
