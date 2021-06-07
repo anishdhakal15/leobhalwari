@@ -24,8 +24,10 @@ def leaders(request):
         return render(request,'leaders.html',{'leaders':leaders})
 def team(request):
     if request.method=='GET':
-        bod=Team.objects.all()
-        return render(request,'teams.html',{'bods':bod})
+        bod=[i for i in Team.objects.all()]
+        top = bod[:3]
+        bod =bod[3:]
+        return render(request,'teams.html',{'tops':top,'bods':bod})
 
 def services(request):
     if request.method=='GET':
