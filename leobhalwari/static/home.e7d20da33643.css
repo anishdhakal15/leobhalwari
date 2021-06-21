@@ -1,0 +1,205 @@
+.navfix{
+    position: sticky;
+    height: 5rem;
+    width: 96%;
+    display: inline-block;
+    margin-left: 2%;
+    margin-top: 1px;
+    z-index: 5;
+}
+#logo{
+    position: fixed;
+    height: 5%;
+    width: 25%;
+    display: inline-flex;
+    margin-left: 2rem;
+    
+
+
+}
+#logo img{
+    height: 4.5rem;
+}
+#logo a{
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    color: black;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-family: revert;
+}
+.rightnav{
+    height: 4rem;
+    width: 36rem;
+    float: right;
+    
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  .dropdown {
+    position: fixed;
+    display: inline-block;
+  }
+  .about-content {
+    display:none;
+    position: fixed;
+    background-color: #f9f9f9;
+    margin-top: 3.7rem;
+    min-width: 17rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .about-content a {
+    color: black;
+    padding: 11px 31px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.3rem;
+  }
+  
+  .about-content a:hover {background-color: #f1f1f1}
+  
+  .about:hover .about-content {
+    display: block;
+  }
+.about{
+    margin-left: 49rem;
+    position: fixed;
+    display: inline-flex;
+}
+.services{
+    margin-left: 58rem;
+    position: fixed;
+    display: inline-flex;
+}
+.join{
+    margin-left: 65.3rem;
+    margin-top: 0.7rem;
+    height: 2.5rem;
+    width: 5rem;
+    position: fixed;
+    border-radius: 32%;
+    padding: 0.3rem 1.1rem;
+    display: inline-flex;
+    background-color: #003087 !important;
+    border-color: #003087 !important;
+    color: #ffffff !important;
+    font-weight: bold;
+
+}
+
+.donate{
+    margin-left: 71rem;
+    margin-top: 0.7rem;
+    width: 6rem;
+    height: 2.5rem;
+    position: fixed;
+    border-radius: 32%;
+    padding: 0.3rem 1.1rem;
+    display: inline-flex;
+    background-color: #f7ed4a !important;
+    border-color: #f7ed4a !important;
+    color: #3f3c03 !important;
+    font-weight: bold;
+}
+.services a{
+    /* margin-top: 1rem; */
+    font-size: 1.3rem;
+    color: black;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-family: revert;
+    font-weight: bold;
+}
+
+.aboutbtn{
+    width: 7rem;
+    padding: 0;
+    border: none;
+    background: none;
+    height: 3.6rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+.cid-rXUnUGfpuC 
+.media-wrap img {
+    height: 6rem;
+    border: 0px hidden white;
+    border-radius: 27%;
+}
+
+.index1{
+    /* background-image:linear-gradient(to bottom, rgb(20, 157, 204),rgb(20, 157, 204), url("")); */
+    background-image:linear-gradient(to bottom, rgba(20, 157, 204, 0.296), rgba(46, 163, 202, 0.212)),url('/media/images/images-28685978-1669890319724509-4559293068700913083-n-960x640.jpg');
+    /* background-color:; */
+    height: 24rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.index1 h3{
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-left: 34rem;
+    width: 36rem;
+    text-align: right;
+    font-family: 'Rubik', sans-serif;
+}
+.main2{
+    position: absolute;
+    font-weight: 300;
+    color: white;
+    margin-top: 10.5rem;
+    margin-left: 14rem;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 58rem;
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.6;
+}
+.index1 .contactus{
+    position: absolute;
+    height: 3rem;
+    width: 9rem;
+    margin: 17.2rem 37rem;
+    
+}
+.index1 .contactus button{
+    text-align: center;
+    background-color: #003087 !important;
+    border-color: #003087 !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important;
+    height: 3.2rem;
+    width: 13rem;
+    border-radius: 1rem 1rem 1rem 1rem;
+}
+.index1 .contactus button:hover{
+color: #ffffff !important;
+background-color: #00153b !important;
+border-color: #00153b !important;
+}
+.index1 .contactus button a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+.index2{
+    height: 2000px;
+}
