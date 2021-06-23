@@ -2,8 +2,6 @@
   {%extends 'base.html' %}
   {% block title %}Our Team{%endblock%}
   {% block head %}<link href='https://css.gg/facebook.css' rel='stylesheet'>{%endblock%}
-
-
   {%block body%}
   <section class="mbr-section info3 cid-rXZX6EU5jc" id="info3-1c">
     <div class="container">
@@ -28,7 +26,6 @@
     
     
     <div class="container align-center">
-        <!-- <h2 class="pb-3 mbr-fonts-style mbr-section-title display-2"><strong>BOARD OF DIRECTORS</strong></h2> -->
         <div class="row media-row">
             {%for top in tops%}
         <div class="team-item col-lg-3 col-md-6">
@@ -76,42 +73,4 @@
             </div>  
     </div>
 </section>
-
-
-
-
-
-
-
-<!-- 
-<section class="team1 cid-rXZXcg4Miw" id="team1-1g">
-    
-    <div class="container align-center">
-        <h2 class="pb-3 mbr-fonts-style mbr-section-title display-2"><strong>COMMITTEE</strong></h2>
-        
-        <div class="row media-row">
-            {%for com in committees%}
-        <div class="team-item col-lg-3 col-md-6">
-                <div class="item-image">
-                    <img src="/media/{{com.image}}" alt="" title="">
-                </div>
-                <div class="item-caption py-3">
-                    <div class="item-name px-2">
-                        <p class="mbr-fonts-style display-7"><strong>{{com.name}}</strong></p>
-                    </div>
-                    <div class="item-role px-2">
-                        <p>{{com.post}}</p>
-                    </div>
-                    <div class="item-social pt-2">
-                        <a href="{{com.facebook_link}}" target="_blank">
-                            <span><i class="gg-facebook"></i></span>
-                        </a>
-                    </div>
-                </div>
-            </div>  
-            {%endfor%}
-        </div>  
-    </div>
-</section> -->
-
 {%endblock%}
