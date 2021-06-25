@@ -3,16 +3,25 @@ from .models import Testimonial,Advisor,leader,Team,Service
 import random
 from math import ceil
 
-# Create your views here.
 def home(request):
     if request.method=='GET':
         testimonial = [i for i in Testimonial.objects.all()]
         advisor = [i for i in Advisor.objects.all()][:3]
         serv=[i for i in Service.objects.all()][:8]
+        temp1=[]
+        temp2 = []
+        x=0
+        for i in serv:
+            if x<3:
+                temp1.append(i)
+                x+=1
+            else:
+                temp2.append(i)
+        serv=[reversed(temp2),reversed(temp1)]
         # serv=range(16)
         n=len(serv)
         nSlides = n // 4 + ceil((n / 4) - (n // 4))
-        return render(request,'index.html',{'testas':testimonial,'advisors':advisor,'product':reversed(serv),'range':range(1,nSlides)})
+        return render(request,'index.html',{'testas':testimonial,'advisors':advisor,'product':serv,'range':range(1,nSlides)})
 
 def history(request):
     if request.method=='GET':
