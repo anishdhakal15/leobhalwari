@@ -2,97 +2,161 @@
   {% block title %}Home{%endblock%}
   {% block head %}
   <style>
-#leftcar{
-    background-color: black;
-    height: 2rem;
-    width: 3rem;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 1rem;
-    border: 1px solid black;
-    border-radius: 30%;
-}    
-#rightcar{
-    background-color: black;
-    height: 2rem;
-    width: 3rem;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 1rem;
-    border: 1px solid black;
-    border-radius: 30%;
-}   
- .gg-chevron-right-o {
- box-sizing: border-box;
- position: relative;
- display: block;
- transform: scale(var(--ggs,1));
- width: 22px;
- height: 22px;
- border: 2px solid;
- border-radius: 100px
-}
+.cards-wrapper {
+        display: flex;
+        justify-content: center;
+    }
 
-.gg-chevron-right-o::after {
- content: "";
- display: block;
- box-sizing: border-box;
- position: absolute;
- width: 6px;
- height: 6px;
- border-bottom: 2px solid;
- border-right: 2px solid;
- transform: rotate(-45deg);
- left: 5px;
- top: 6px
-} 
- .gg-chevron-left-o {
- box-sizing: border-box;
- position: relative;
- display: block;
- transform: scale(var(--ggs,1));
- width: 22px;
- height: 22px;
- border: 2px solid;
- border-radius: 100px
-}
+    .card img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 
-.gg-chevron-left-o::after {
- content: "";
- display: block;
- box-sizing: border-box;
- position: absolute;
- width: 6px;
- height: 6px;
- border-bottom: 2px solid;
- border-left: 2px solid;
- transform: rotate(45deg);
- left: 7px;
- top: 6px
-} 
-#recentshow{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .card {
+        margin: 0 0.5em;
+        box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+        border: none;
+        border-radius: 0;
+    }
 
-.contact{
-    background-image: url(/media/images/find-us-on-facebook-like-us-on-facebook.png);
-    width: 15rem;
-    height: 3.4rem;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.mainwin{
-    height: 32rem;
-    padding-top: 105px;
-    padding-bottom: 45px;
-    background-image: url("/media/images/images-28685978-1669890319724509-4559293068700913083.jpg");
-}
-.mainwin H3 {
-  text-align: right;
-}
+    .carousel-inner {
+        padding: 1em;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        background-color: #e1e1e1;
+        width: 5vh;
+        height: 5vh;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @media (min-width: 768px) {
+        .card img {
+            height: 11em;
+        }
+        
+    }
+    @media (max-width: 768px) {
+        #recentshow {
+padding-right: 3rem;
+        }
+    }
+    
+    #carouselExampleControls_5{
+        padding-left: 3.1rem;
+        margin-top: -40px;
+    }
+
+    #leftcar {
+        /* background-color: #e1e1e1; */
+        width: 5vh;
+        height: 5vh;
+        border-radius: 30%;
+        top: 50%;
+        transform: translateY(-50%);
+         background-color: black;
+     /*   
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 1rem;
+        border: 1px solid black;
+        border-radius: 30%; */
+    }
+
+    #rightcar {
+        width: 5vh;
+        height: 5vh;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+         background-color: black;
+         margin-right: 1rem;
+       /* height: 2rem;
+        width: 3rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        
+        border: 1px solid black;
+        border-radius: 30%; */
+    }
+
+    .gg-chevron-right-o {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs, 1));
+        width: 22px;
+        height: 22px;
+        border: 2px solid;
+        border-radius: 100px
+    }
+
+    .gg-chevron-right-o::after {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-bottom: 2px solid;
+        border-right: 2px solid;
+        transform: rotate(-45deg);
+        left: 5px;
+        top: 6px
+    }
+
+    .gg-chevron-left-o {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs, 1));
+        width: 22px;
+        height: 22px;
+        border: 2px solid;
+        border-radius: 100px
+    }
+
+    .gg-chevron-left-o::after {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-bottom: 2px solid;
+        border-left: 2px solid;
+        transform: rotate(45deg);
+        left: 7px;
+        top: 6px
+    }
+
+    #recentshow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact {
+        background-image: url(/media/images/find-us-on-facebook-like-us-on-facebook.png);
+        width: 15rem;
+        height: 3.4rem;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .mainwin {
+        height: 32rem;
+        padding-top: 105px;
+        padding-bottom: 45px;
+        background-image: url("/media/images/images-28685978-1669890319724509-4559293068700913083.jpg");
+    }
+    .mainwin H3 {
+        text-align: right;
+    }
   </style>
   {%endblock%}
   {%block body%}
@@ -126,41 +190,52 @@
                 </div>
             </div>
         </div>
-            <div id="demo" class="carousel slide my-3" data-ride="carousel">
-                <ul class="carousel-indicators">
-            <li data-target="#demo" data-slide-to="0" class="active"></li>
-            {%for i in range%}
-            <li data-target="#demo" data-slide-to="{{i}}" ></li>
-            {%endfor%}
-          </ul>                
-                <div class="container carousel-inner no-padding">
-                  <div class="carousel-item active">
-                    
-                    {%for i in product %}
-                    <div class="col-xs-5 col-sm-6 col-md-3">
-                      <div class="card" style="width: 14.5rem; ">
-                        <img src='/media/{{i.image}}' class="card-img-top" alt='image'>
-                        <div class="card-body">
-                          <h5 class="card-title" id="name"><b>{{i.title|truncatechars:20}}</b></h5>
-                          <p class="card-text">{{i.string|truncatechars:120}}</p>
+            <div id="carouselExampleControls_5" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    {%for j in product %}
+                    <div class="cards-wrapper ">
+                        {%for i in j %}
+                        {%if forloop.first%}
+                        <div class="card" style="width: 14.5rem;" >
+                        {%else%}
+                        <div class="card d-none d-md-block" style="width: 16rem;" >
+                        {%endif%}
+                            <img src="/media/{{i.image}}" class="card-img-top"
+                                alt="bootstrap-multiple-items-carousel-slide-1-card-3">
+                            <div class="card-body">
+                                <h5 class="card-title">{{i.title|truncatechars:20}}</h5>
+                                <p class="card-text">{{i.string|truncatechars:120}}</p>
+
+                            </div>
                         </div>
-                      </div>
-                   </div>
-                      {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last %}
-                        </div><div class="carousel-item">
-                     
-                      {%endif%}
-                    {%endfor%}               
-                  </div>
-                  </div>
-                  <div id="recentshow" >
-                    <a href="/services" class="btn btn-primary-outline display-4">Show More</a>
-                </div>    
+                        {%endfor%}
+                        {% if forloop.counter > 0 and not forloop.last %}
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+
+                    {%endif%}
+                    {%endfor%}
+                </div>
             </div>
-                <span class="carousel-control-prev "  href="#demo" id="leftcar" data-slide="prev"><i class="gg-chevron-left-o"></i></span>
+        </div>
 
-                <span class="carousel-control-next" href="#demo" id="rightcar" data-slide="next"><i class="gg-chevron-right-o"></i></span>
-
+        <a id="leftcar" class="carousel-control-prev" href="#carouselExampleControls_5" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a id="rightcar" class="carousel-control-next" href="#carouselExampleControls_5" role="button"
+            data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <div id="recentshow" >
+            <a href="/services" class="btn btn-primary-outline display-4">Show More</a>
+        </div>
+    </div>
  </div>
     </section>
     <section class="testimonials4 cid-rXUjsgOGWE" id="testimonials4-d">
